@@ -1,0 +1,97 @@
+/* Бүхэлд нь тохируулах */
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff;
+  }
+  
+  .animation-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 10;
+  }
+  
+  .year {
+    font-size: 5rem;
+    animation: glow 2s infinite alternate;
+    text-shadow: 0 0 20px #ff7eb3, 0 0 30px #ff7eb3, 0 0 40px #ff7eb3;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #b0e0e6;
+    text-shadow: 0 0 10px #fff;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    background: #ff7eb3;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(255, 126, 179, 0.5);
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    background: #ff4a93;
+    transform: scale(1.1);
+  }
+  
+  /* Glow effect */
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 20px #ff7eb3, 0 0 30px #ff7eb3, 0 0 40px #ff7eb3;
+    }
+    to {
+      text-shadow: 0 0 30px #ffd1dc, 0 0 40px #ffd1dc, 0 0 50px #ffd1dc;
+    }
+  }
+  
+  /* Greeting style */
+  #greeting {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: #ffe4b5;
+    text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  #greeting.visible {
+    opacity: 1;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* Responsive дизайн */
+  @media (max-width: 768px) {
+    .year {
+      font-size: 3.5rem;
+    }
+  
+    .subtitle {
+      font-size: 1rem;
+    }
+  
+    button {
+      padding: 8px 16px;
+      font-size: 0.9rem;
+    }
+  
+    #greeting {
+      font-size: 1.2rem;
+    }
+  }
+  
